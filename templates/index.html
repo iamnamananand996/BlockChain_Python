@@ -1,0 +1,41 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+
+
+<div class="container">
+    <div class="jumbotron" style="text-align:center">
+        <h1>Welcome To Block Chain</h1>
+    </div>
+
+    <div class="row">
+
+       <div class="col-sm-4" style="text-align:center">
+        <form action="{{url_for('mine_block')}}" method="GET">
+            <input type="submit" value="Mine Block" class="btn" >
+        </form>
+       </div>
+
+        
+       <div class="col-sm-4" style="text-align:center">
+        <form action="{{url_for('print_chain')}}">
+            <input type="submit" value="Print Chain" class="btn">
+        </form>
+       </div>
+        
+       <div class="col-sm-4" style="text-align:center">
+        <form action="{{url_for('check_blockchain')}}">
+            <input type="submit" value="Check Blockchain" class="btn">
+        </form>
+       </div>
+        
+
+    </div>
+    
+    
+    
+</div>
+    
+
+
+
+{% endblock %}
